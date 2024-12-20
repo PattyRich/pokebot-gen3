@@ -29,6 +29,7 @@ def get_bot_modes() -> list[Type[BotMode]]:
         from .rock_smash import RockSmashMode
         from .spin import SpinMode
         from .starters import StartersMode
+        from .patrick import PatrickMode
         from .sudowoodo import SudowoodoMode
         from .static_run_away import StaticRunAway
         from .static_gift_resets import StaticGiftResetsMode
@@ -50,6 +51,7 @@ def get_bot_modes() -> list[Type[BotMode]]:
             RockSmashMode,
             SpinMode,
             StartersMode,
+            PatrickMode,
             StaticRunAway,
             StaticGiftResetsMode,
             StaticSoftResetsMode,

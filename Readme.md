@@ -1,3 +1,6 @@
+This is just the original repo, but i've hacked a way to hunt shinys for Emerald Legacy. Since it uses a different address space for things and the original can't read game states. Check image.py for specifics, but in general it checks a specific pixel after preset movements to see if the pokemon is shiny. The name, pixel color, and check pixel location all have to be supplied. Only works for windows as of now. Pokemon is guessed using pytesseract to guess the pokemon from the image of its name.
+
+
 # PokéBot Gen3 (libmgba)
 [![Wiki](wiki/images/badge_wiki.svg)](wiki/Readme.md) [![Python 3.12](wiki/images/badge_python.svg)](https://www.python.org/downloads/release/python-3120/) [![Code Formatting](wiki/images/badge_black.svg)](https://github.com/psf/black)
 

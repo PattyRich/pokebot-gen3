@@ -3,6 +3,7 @@ from typing import Literal
 
 from modules.roms import ROM, ROMLanguage
 from modules.runtime import get_data_path
+from modules.console import console
 
 _symbols: dict[str, tuple[int, int]] = {}
 _reverse_symbols: dict[int, tuple[str, str, int]] = {}

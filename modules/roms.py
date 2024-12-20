@@ -216,7 +216,8 @@ def _load_gba_rom(file: Path, handle: BinaryIO) -> ROM:
     sha1 = hashlib.sha1()
     sha1.update(handle.read())
     if sha1.hexdigest() not in GBA_ROMS:
-        raise InvalidROMError("ROM not supported.")
+        pass
+        # raise InvalidROMError("ROM not supported.")
 
     handle.seek(0xA0)
     game_title = handle.read(12).decode("ascii")
@@ -278,5 +279,11 @@ def load_rom_data(file: Path) -> ROM:
         if gb_magic_string == b"\xCE\xED\x66\x66":
             rom_cache[str(file)] = _load_gb_rom(file, handle)
             return rom_cache[str(file)]
+        
+        # handle.seek(0x0)
+        # sha1 = hashlib.sha1()
+        # sha1.update(handle.read())
+        # if sha1.hexdigest() not in ROM_HASHES:
+        #     raise InvalidROMError("ROM not supported.")
 
     raise InvalidROMError(f"File `{file.name}` does not seem to be a valid ROM (magic number missing.)")
